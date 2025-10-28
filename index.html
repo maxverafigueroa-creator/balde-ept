@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balde del Día de Muertos y Petunia</title>
+  <style>
+    /* --- Estilos base --- */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color: #f8f8f8;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #000, #222);
+      color: #ffde59;
+      text-shadow: 0 0 10px #ffde59, 0 0 25px #ffde59;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: repeating-linear-gradient(
+        90deg,
+        #ff4b4b,
+        #ff4b4b 20px,
+        #ffde59 20px,
+        #ffde59 40px,
+        #6d1a99 40px,
+        #6d1a99 60px
+      );
+      animation: moverCinta 8s linear infinite;
+    }
+
+    @keyframes moverCinta {
+      0% { background-position-x: 0; }
+      100% { background-position-x: 120px; }
+    }
+
+    section {
+      padding: 70px 10%;
+      position: relative;
+      background: rgba(255, 255, 255, 0.02);
+      margin: 40px auto;
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+      max-width: 1000px;
+    }
+
+    h2 {
+      color: #ffde59;
+      text-shadow: 0 0 8px #ffde59;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    /* --- Pétalos cayendo --- */
+    .petalo {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle, #ff8fab 40%, transparent 70%);
+      border-radius: 50%;
+      animation: caer 10s linear infinite;
+      top: -10px;
+      z-index: 10;
+      opacity: 0.8;
+    }
+
+    @keyframes caer {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* --- Tiras colgantes (papel picado) --- */
+    .tiras {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      z-index: 15;
+      pointer-events: none;
+      animation: balanceo 3s ease-in-out infinite alternate;
+    }
+
+    .tira {
+      width: 80px;
+      height: 120px;
+      border-radius: 10px;
+      margin-top: 5px;
+      opacity: 0.9;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      transform-origin: top;
+    }
+
+    .tira:nth-child(1) { background: #ff4b4b; }
+    .tira:nth-child(2) { background: #ffde59; }
+    .tira:nth-child(3) { background: #6d1a99; }
+    .tira:nth-child(4) { background: #ff8fab; }
+    .tira:nth-child(5) { background: #43c47d; }
+
+    @keyframes balanceo {
+      from { transform: rotate(1deg); }
+      to { transform: rotate(-2deg); }
+    }
+
+    /* --- Luces parpadeantes --- */
+    .luz {
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      background: #ffde59;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #ffde59;
+      animation: parpadeo 2s infinite alternate;
+      z-index: 12;
+    }
+
+    @keyframes parpadeo {
+      from { opacity: 0.2; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1.3); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💀 Balde del Día de Muertos y 🌸 Petunia</h1>
+    <p>Un homenaje a la tradición, la vida y la naturaleza</p>
+  </header>
+
+  <section id="balde">
+    <h2>🪦 Significado del Balde en el Día de Muertos</h2>
+    <p><strong>1. El color negro:</strong> representa el misterio, el duelo y el mundo de los muertos. En la tradición del Día de Muertos, este color simboliza el camino que separa la vida de la muerte, un espacio de respeto hacia las almas que regresan.</p>
+
+    <p><strong>2. Las manos blancas:</strong> unión entre vivos y muertos. Simbolizan conexión, afecto y guía, representando la pureza del alma, la luz y la paz espiritual.</p>
+
+    <p><strong>3. La calavera:</strong> vida y muerte en equilibrio. Es el símbolo más icónico del Día de Muertos; no representa terror, sino memoria, celebración y amor eterno.</p>
+
+    <p><strong>4. Las huellas:</strong> el paso de las almas. Si el balde tiene huellas, representan el paso de las almas que regresan en la noche del 1 y 2 de noviembre, guiadas por flores de cempasúchil o luces.</p>
+
+    <p><strong>5. Significado general:</strong> el balde negro guarda el recuerdo, las manos lo protegen, y la calavera preside el ciclo entre la vida y la muerte. En conjunto, representa el abrazo entre lo terrenal y lo espiritual.</p>
+
+    <img src="balde_muerte.jpg" alt="Balde decorado Día de Muertos">
+  </section>
+
+  <section id="petunia">
+    <h2>🌺 La Petunia</h2>
+    <p>La <strong>Petunia</strong> es una planta ornamental de la familia <em>Solanaceae</em>, originaria de América del Sur. Es apreciada por sus flores en tonos rosados, violetas, rojos, blancos y azules, y su nombre proviene del término indígena brasileño “petum”, que significa tabaco, por su parentesco botánico.</p>
+
+    <p><strong>Características:</strong> La petunia es una planta herbácea que puede alcanzar entre 15 y 60 cm de altura. Sus flores acampanadas desprenden un aroma suave y florecen en primavera y verano, atrayendo mariposas y abejas.</p>
+
+    <p><strong>Cuidados:</strong> Prefiere suelos fértiles, bien drenados y sol directo. Requiere riego moderado y debe protegerse de las heladas.</p>
+
+    <p><strong>Simbolismo:</strong> Representa la paz interior, el consuelo y el amor sereno. Regalar una petunia expresa afecto duradero y gratitud.</p>
+
+    <img src="petunia_flor.jpg" alt="Flor de petunia">
+  </section>
+
+  <footer>
+    <p>© 2025 Creado por Heymi Ayala julca  — Proyecto Cultural</p>
+  </footer>
+
+  <script>
+    // Pétalos cayendo
+    for (let i = 0; i < 25; i++) {
+      const petalo = document.createElement("div");
+      petalo.classList.add("petalo");
+      petalo.style.left = Math.random() * 100 + "vw";
+      petalo.style.animationDuration = 5 + Math.random() * 5 + "s";
+      petalo.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(petalo);
+    }
+
+    // Tiras colgantes (papel picado)
+    const tiras = document.createElement("div");
+    tiras.classList.add("tiras");
+    for (let i = 0; i < 5; i++) {
+      const tira = document.createElement("div");
+      tira.classList.add("tira");
+      tiras.appendChild(tira);
+    }
+    document.body.appendChild(tiras);
+
+    // Luces parpadeantes
+    for (let i = 0; i < 20; i++) {
+      const luz = document.createElement("div");
+      luz.classList.add("luz");
+      luz.style.left = Math.random() * 100 + "vw";
+      luz.style.top = Math.random() * 100 + "vh";
+      luz.style.animationDelay = Math.random() * 3 + "s";
+      document.body.appendChild(luz);
+    }
+  </script>
+</body>
+</html>
